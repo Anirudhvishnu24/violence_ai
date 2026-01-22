@@ -14,9 +14,11 @@ from tensorflow import keras
 try:
     # When running as module: python -m src.predict
     from src.frames import extract_frames
+    from src.model_download import ensure_model_exists, get_model_path
 except ImportError:
     # When running directly
     from frames import extract_frames
+    from model_download import ensure_model_exists, get_model_path
 
 
 def predict_video(video_path: str, model_path: str = "model/violence_model.h5"):
@@ -70,6 +72,13 @@ def predict_video(video_path: str, model_path: str = "model/violence_model.h5"):
 
 def main():
     """CLI entry point."""
+    # Ensure model exists before running prediction
+    try:
+        ensure_model_exists()
+    except RuntimeError as e:
+        print(f"\n❌ {str(e)}")
+        sys.exit(1)
+    
     parser = argparse.ArgumentParser(
         description="Predict violence content in video files"
     )
@@ -82,7 +91,7 @@ def main():
     parser.add_argument(
         "--model",
         type=str,
-        default="model/violence_model.h5",
+        default=get_model_path(),
         help="Path to trained model (default: model/violence_model.h5)"
     )
     

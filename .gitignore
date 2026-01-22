@@ -10,6 +10,9 @@ ENV/
 data/
 datasets/
 
+# Trained Model (too large for GitHub - auto-downloaded from Google Drive)
+model/violence_model.h5
+
 # Temporary Files
 temp/
 tmp/
@@ -41,15 +44,13 @@ Thumbs.db
 # Jupyter
 .ipynb_checkpoints/
 
-# ========== INCLUDE THESE (DO PUSH) ==========
-# model/violence_model.h5 - INCLUDED (trained model for CASE 1)
-# outputs/ - INCLUDED (plots and results)
-# src/ - INCLUDED (source code)
-# app/ - INCLUDED (Streamlit UI)
-
 # Testing
 .pytest_cache/
 .coverage
 
-# CASE 1: KEEP trained model (do NOT ignore)
-# model/violence_model.h5 is intentionally included
+# ========== INCLUDE THESE (DO PUSH) ==========
+# src/ - INCLUDED (source code)
+# app/ - INCLUDED (Streamlit UI)
+# model/  - INCLUDED (directory created at runtime)
+# outputs/ - INCLUDED (generated plots)
+# README.md, requirements.txt - INCLUDED (documentation)

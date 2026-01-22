@@ -21,6 +21,14 @@ if project_root not in sys.path:
     sys.path.insert(0, project_root)
 
 from src.frames import extract_frames
+from src.model_download import ensure_model_exists, get_model_path
+
+# Ensure model exists before app starts
+try:
+    ensure_model_exists()
+except RuntimeError as e:
+    st.error(f"❌ {str(e)}")
+    st.stop()
 
 
 # ==================== CUSTOM STYLING ====================
@@ -510,7 +518,7 @@ def main():
     render_sidebar_info()
     
     # Check if model exists
-    model_path = "model/violence_model.h5"
+    model_path = get_model_path()
     model = load_model(model_path)
     
     if model is None:

@@ -2,11 +2,11 @@
 
 ## ⚡ Quick Start (5 minutes - No Training Needed!)
 
-**The trained model is included!** You can run immediately without any training.
+**Run immediately without retraining!** The trained model is automatically downloaded from Google Drive on first run.
 
 ### Step 1: Clone Repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/violence_ai.git
+git clone https://github.com/Anirudhvishnu24/violence_ai.git
 cd violence_ai
 ```
 
@@ -15,12 +15,14 @@ cd violence_ai
 pip install -r requirements.txt
 ```
 
+The `gdown` package will be installed to handle model download from Google Drive.
+
 ### Step 3: Run the App
 ```bash
 streamlit run app/ui.py
 ```
 
-Open **http://localhost:8501** in your browser. Upload a video and get instant predictions! 
+Open **http://localhost:8501** in your browser. The model will auto-download on first run (~2-3 minutes).
 
 **What you get:**
 - ✅ NONVIOLENT / ⚠️ VIOLENT classification
@@ -28,6 +30,50 @@ Open **http://localhost:8501** in your browser. Upload a video and get instant p
 - Risk level indicator (🟢 SAFE / 🟡 MEDIUM / 🔴 HIGH RISK)
 - Real-time video preview
 - Detailed analysis
+
+### Alternative: Command-Line Usage
+```bash
+python -m src.predict --video "path/to/video.mp4"
+```
+
+The model auto-downloads if missing. Output:
+```
+PREDICTION RESULT
+Label: VIOLENT
+Confidence: 0.8743
+```
+
+---
+
+## Model Auto-Download
+
+**Why?** The trained model is ~103 MB, exceeding GitHub's 100 MB per-file limit.
+
+**Solution:** The model is stored on Google Drive and auto-downloads on first run.
+
+### If Auto-Download Fails
+
+**Option A: Manual Download**
+1. Download from Google Drive: [violence_model.h5](https://drive.google.com/file/d/10rBn5SKjwuzrc3lxUeq4M1G-6-h1LL6S/view?usp=sharing)
+2. Extract to: `model/violence_model.h5`
+3. Run the app again: `streamlit run app/ui.py`
+
+**Option B: Train Your Own**
+```bash
+python -m src.train
+```
+Requires your own dataset in `data/nonviolent/` and `data/violent/`
+
+---
+
+## Troubleshooting
+
+| Issue | Solution |
+|-------|----------|
+| "Model download failed" | Check internet connection, then run again |
+| "ModuleNotFoundError: gdown" | Run `pip install gdown` then try again |
+| "Model file is 103.25 MB..." | Using auto-download - just wait for first-run completion |
+| Slow first run | Normal - model download takes 2-3 minutes on first run |
 
 ---
 
