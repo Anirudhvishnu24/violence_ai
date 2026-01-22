@@ -1,0 +1,163 @@
+# 🚀 COPY-PASTE: EXACT GIT COMMANDS FOR GITHUB PUSH
+
+## ⚠️ IMPORTANT: Replace These BEFORE Running
+
+- Replace `YOUR_USERNAME` with your GitHub username (e.g., `jane-doe`)
+- Replace `your.email@gmail.com` with your actual GitHub email
+- Replace `Your Name` with your actual name
+
+---
+
+## COMMAND 1: Initialize Git (Run First)
+
+```powershell
+cd D:\violence_ai
+git init
+git config user.email "your.email@gmail.com"
+git config user.name "Your Name"
+```
+
+**What it does:** Creates empty git repo and sets your identity
+
+---
+
+## COMMAND 2: Stage & Commit Files (Run Second)
+
+```powershell
+git add .
+git status
+```
+
+**Verify you see:** ~25 files listed in green (staged for commit)
+
+Then run:
+
+```powershell
+git commit -m "Initial commit: Violence Detection AI with trained ResNet50+LSTM model (CASE 1 - model included)"
+```
+
+**What it does:** Commits all files (model, code, docs) as one unit
+
+---
+
+## COMMAND 3: Create Empty Repo on GitHub (Browser - Manual Step)
+
+**Go to:** https://github.com/new
+
+**Fill in:**
+- Repository name: `violence_ai`
+- Description: `Deep Learning Violence Detection AI with pre-trained ResNet50+LSTM model`
+- Visibility: Choose **Public**
+
+**Do NOT check:**
+- ❌ Initialize with README
+- ❌ Add .gitignore
+- ❌ Add License
+
+**Click:** Create repository
+
+---
+
+## COMMAND 4: Connect to GitHub & Push (Run Fourth)
+
+```powershell
+git remote add origin https://github.com/YOUR_USERNAME/violence_ai.git
+git branch -M main
+git push -u origin main
+```
+
+**Replace** `YOUR_USERNAME` with your actual GitHub username.
+
+**Example:** If your GitHub username is `alice-smith`:
+```powershell
+git remote add origin https://github.com/alice-smith/violence_ai.git
+```
+
+**What happens:** 
+- GitHub login window pops up
+- Sign in with your account
+- Files upload (103 MB model takes 1-5 minutes)
+- Shows success message
+
+---
+
+## COMMAND 5: Verify Success (Run Last)
+
+```powershell
+git remote -v
+git log --oneline -3
+git branch -v
+```
+
+**Expected output:**
+```
+origin  https://github.com/YOUR_USERNAME/violence_ai.git (fetch)
+origin  https://github.com/YOUR_USERNAME/violence_ai.git (push)
+
+abc1234 Initial commit: Violence Detection AI...
+
+* main    abc1234 [origin/main] Initial commit...
+```
+
+---
+
+## All Commands in One Block (Copy-Paste All at Once)
+
+```powershell
+cd D:\violence_ai
+git init
+git config user.email "your.email@gmail.com"
+git config user.name "Your Name"
+git add .
+git status
+git commit -m "Initial commit: Violence Detection AI with trained ResNet50+LSTM model (CASE 1 - model included)"
+git remote add origin https://github.com/YOUR_USERNAME/violence_ai.git
+git branch -M main
+git push -u origin main
+git remote -v
+git log --oneline -3
+git branch -v
+```
+
+---
+
+## View Your Repository
+
+After successful push, visit:
+```
+https://github.com/YOUR_USERNAME/violence_ai
+```
+
+You'll see your code, model (103 MB), and README with Quick Start!
+
+---
+
+## What Gets Pushed
+
+✅ **YES:**
+- model/violence_model.h5 (103 MB - trained model)
+- src/*.py (training and prediction code)
+- app/ui.py (Streamlit dashboard)
+- README.md (with Quick Start section)
+- requirements.txt (dependencies)
+
+❌ **NO:**
+- data/ folder (excluded in .gitignore)
+- venv/ folder (excluded in .gitignore)
+
+---
+
+## Users Can Now Run Without Training
+
+```bash
+git clone https://github.com/YOUR_USERNAME/violence_ai.git
+cd violence_ai
+pip install -r requirements.txt
+streamlit run app/ui.py
+```
+
+**Result:** They upload videos and get instant predictions with your trained model! 🎉
+
+---
+
+**Ready? Paste the commands above into PowerShell and deploy! 🚀**

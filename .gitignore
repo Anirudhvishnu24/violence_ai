@@ -1,0 +1,55 @@
+# ========== EXCLUDE THESE (DO NOT PUSH) ==========
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv
+
+# Training Data (raw videos - too large)
+data/
+datasets/
+
+# Temporary Files
+temp/
+tmp/
+*.tmp
+*.log
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+*.egg
+build/
+dist/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# ========== INCLUDE THESE (DO PUSH) ==========
+# model/violence_model.h5 - INCLUDED (trained model for CASE 1)
+# outputs/ - INCLUDED (plots and results)
+# src/ - INCLUDED (source code)
+# app/ - INCLUDED (Streamlit UI)
+
+# Testing
+.pytest_cache/
+.coverage
+
+# CASE 1: KEEP trained model (do NOT ignore)
+# model/violence_model.h5 is intentionally included
