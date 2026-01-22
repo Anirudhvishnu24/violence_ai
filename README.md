@@ -1,4 +1,6 @@
 # Violence Detection System v2
+ Live Demo
+🌐 https://videoviolence-detector.streamlit.app/
 
 ## ⚡ Quick Start (5 minutes - No Training Needed!)
 
