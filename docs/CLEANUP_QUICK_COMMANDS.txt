@@ -1,0 +1,92 @@
+# QUICK CLEANUP - EXACT COMMANDS
+
+## One-Command Solution
+
+Copy and paste this entire block into PowerShell:
+
+```powershell
+cd D:\violence_ai
+
+# Create docs folder (already done)
+# Move all guide files
+git mv AUTO_DOWNLOAD_SETUP.md docs/ 2>$null
+git mv COPY_PASTE_COMMANDS.txt docs/ 2>$null
+git mv DEPLOYMENT_CHECKLIST.md docs/ 2>$null
+git mv EVALUATION_FIX.md docs/ 2>$null
+git mv EVALUATION_FIX_BEFORE_AFTER.md docs/ 2>$null
+git mv EVALUATION_FIX_COMPLETE.md docs/ 2>$null
+git mv EVALUATION_FIX_VERIFICATION.md docs/ 2>$null
+git mv EXACT_CODE_CHANGES.md docs/ 2>$null
+git mv FIX_COMPLETE.md docs/ 2>$null
+git mv GITHUB_EXACT_COMMANDS.md docs/ 2>$null
+git mv GITHUB_FINAL_PUSH.md docs/ 2>$null
+git mv GITHUB_FINAL_PUSH.txt docs/ 2>$null
+git mv GITHUB_PUSH_COMMANDS.ps1 docs/ 2>$null
+git mv GITHUB_PUSH_GUIDE.md docs/ 2>$null
+git mv GITHUB_PUSH_QUICK_REFERENCE.md docs/ 2>$null
+git mv GITHUB_PUSH_STEPS.md docs/ 2>$null
+git mv QUICK_REFERENCE_AUTO_DOWNLOAD.md docs/ 2>$null
+git mv README_QUICK_START_SECTION.md docs/ 2>$null
+git mv START_HERE_DEPLOYMENT.ps1 docs/ 2>$null
+git mv STREAMLIT_QUICK_START.md docs/ 2>$null
+git mv TRAINING_FIX_README.md docs/ 2>$null
+git mv TRAINING_FIX_SUMMARY.md docs/ 2>$null
+git mv UI_DESIGN_REFERENCE.md docs/ 2>$null
+git mv UI_IMPLEMENTATION_REPORT.md docs/ 2>$null
+git mv UI_REDESIGN.md docs/ 2>$null
+git mv UI_REDESIGN_COMPLETE.md docs/ 2>$null
+git mv UI_UPGRADE_COMPLETE.md docs/ 2>$null
+
+# Verify changes
+git status
+
+# Commit
+git commit -m "Organize documentation into docs/ folder for cleaner repository"
+
+# Push
+git push origin main
+```
+
+---
+
+## Step-by-Step (If Preferred)
+
+### Step 1: Check Status
+```powershell
+cd D:\violence_ai
+git status
+```
+
+### Step 2: Move Files
+```powershell
+# Run the git mv commands from the one-command section above
+```
+
+### Step 3: Verify
+```powershell
+git status
+# Should show files being moved to docs/
+```
+
+### Step 4: Commit
+```powershell
+git commit -m "Organize documentation into docs/ folder for cleaner repository"
+```
+
+### Step 5: Push
+```powershell
+git push origin main
+```
+
+---
+
+## Result
+
+✅ Clean root folder
+✅ All guides organized in docs/
+✅ README.md with docs links
+✅ Professional appearance for recruiters
+
+---
+
+**Run the one-command solution above! 🚀**

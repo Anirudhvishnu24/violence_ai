@@ -66,6 +66,17 @@ Requires your own dataset in `data/nonviolent/` and `data/violent/`
 
 ---
 
+## 📚 Documentation
+
+For detailed setup guides, troubleshooting, and deployment instructions, see the [docs/](./docs/) folder:
+
+- **[AUTO_DOWNLOAD_SETUP.md](./docs/AUTO_DOWNLOAD_SETUP.md)** - Complete auto-download configuration guide
+- **[QUICK_REFERENCE_AUTO_DOWNLOAD.md](./docs/QUICK_REFERENCE_AUTO_DOWNLOAD.md)** - Quick reference for setup
+- **[DEPLOYMENT_CHECKLIST.md](./docs/DEPLOYMENT_CHECKLIST.md)** - Pre-deployment verification
+- **[GITHUB_FINAL_PUSH.md](./docs/GITHUB_FINAL_PUSH.md)** - Step-by-step GitHub push guide
+
+---
+
 ## Troubleshooting
 
 | Issue | Solution |
